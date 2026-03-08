@@ -12,5 +12,4 @@ v1.route("/posts", post);
 v1.route("/comments", comment);
 v1.route("/users", users);
 
-
 export default v1;

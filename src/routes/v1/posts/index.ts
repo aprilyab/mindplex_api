@@ -58,8 +58,8 @@ app.get("/", guard("optional"), postListDocs, validator("query", PostListQuerySc
 
   let resolvedIncludes = [...include];
 
-  if (sort === 'popular' || feed === 'peoples-choice') {
-    resolvedIncludes = [...new Set([...include, 'stats'])];
+  if (sort === "popular" || feed === "peoples-choice") {
+    resolvedIncludes = [...new Set([...include, "stats"])];
   }
 
   const selection = buildFieldSelection(posts, fields, FORBIDDEN_COLUMNS, { id: true });

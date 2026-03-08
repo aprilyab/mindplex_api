@@ -42,8 +42,6 @@ export const PostDetailsQuerySchema = v.object({
   include: createIncludesSchema(ALLOWED_INCLUDES),
 });
 
-
-
 // ─── Body Schemas ───────────────────────────────────────────
 
 export const CreatePostSchema = v.object({

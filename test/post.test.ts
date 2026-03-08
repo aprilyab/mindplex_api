@@ -11,7 +11,6 @@ afterAll(async () => {
   await cleanup();
 });
 
-
 describe("GET /v1/posts", () => {
   it("returns a list of posts", async () => {
     const res = await api.get("/v1/posts");
@@ -268,7 +267,6 @@ describe("PATCH /v1/posts/:identifier", () => {
   });
 });
 
-
 describe("DELETE /v1/posts/:identifier", () => {
   it("requires auth", async () => {
     const res = await api.delete(`/v1/posts/${s.posts[2].slug}`);
@@ -306,7 +304,6 @@ describe("DELETE /v1/posts/:identifier", () => {
     expect(res.status).toBe(404);
   });
 });
-
 
 describe("GET /v1/posts — type filter", () => {
   it("filters by ?type=news", async () => {
@@ -404,8 +401,6 @@ describe("GET /v1/posts — sort=all (trending)", () => {
     expect(body.data).toBeArray();
     expect(body.data.length).toBeGreaterThan(0);
   });
-
-
 });
 
 describe("GET /v1/posts — sort=trending (fallback)", () => {
